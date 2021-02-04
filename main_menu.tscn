@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://main_menu.gd" type="Script" id=2]
 
 [node name="main_menu" type="CanvasLayer"]
+script = ExtResource( 2 )
 
 [node name="PanelHost" type="Panel" parent="."]
 margin_left = 10.0
@@ -38,6 +40,7 @@ margin_left = 16.0
 margin_top = 49.0
 margin_right = 287.0
 margin_bottom = 73.0
+text = "Server"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,10 +57,11 @@ __meta__ = {
 
 [node name="txtServerPort" type="LineEdit" parent="PanelHost"]
 anchor_left = 6.35783e-09
-margin_left = 19.6052
-margin_top = 104.759
-margin_right = 77.6052
-margin_bottom = 128.759
+anchor_right = 6.35783e-09
+margin_left = 19.0
+margin_top = 104.092
+margin_right = 77.0
+margin_bottom = 128.092
 text = "4546"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -119,31 +123,31 @@ __meta__ = {
 }
 
 [node name="txtJoinIP" type="LineEdit" parent="PanelJoin"]
-margin_left = 136.535
-margin_top = 51.0
-margin_right = 194.535
-margin_bottom = 75.0
-text = "4546"
+margin_left = 19.0
+margin_top = 52.0
+margin_right = 105.0
+margin_bottom = 76.0
+text = "127.0.0.1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label3" type="Label" parent="PanelJoin"]
-margin_left = 131.0
-margin_top = 34.0
-margin_right = 201.0
-margin_bottom = 52.0
+margin_left = 112.312
+margin_top = 35.3348
+margin_right = 182.312
+margin_bottom = 53.3348
 text = "Port"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="txtJoinPort" type="LineEdit" parent="PanelJoin"]
-margin_left = 23.0
-margin_top = 51.0
-margin_right = 108.0
-margin_bottom = 75.0
-text = "127.0.0.1"
+margin_left = 120.0
+margin_top = 55.0
+margin_right = 178.0
+margin_bottom = 79.0
+text = "4546"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -223,3 +227,5 @@ text = "Default"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="PanelHost/btCreate" to="." method="_on_btCreate_pressed"]
+[connection signal="pressed" from="PanelJoin/btJoin" to="." method="_on_btJoin_pressed"]
