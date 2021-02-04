@@ -1,0 +1,225 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="main_menu" type="CanvasLayer"]
+
+[node name="PanelHost" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 170.0
+margin_right = 310.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PanelHost"]
+margin_left = 100.828
+margin_top = 8.29288
+margin_right = 197.828
+margin_bottom = 26.2929
+text = "Create Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PanelHost"]
+margin_left = 9.5661
+margin_top = 31.8481
+margin_right = 95.5661
+margin_bottom = 45.8481
+text = "Server Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txtServerName" type="LineEdit" parent="PanelHost"]
+margin_left = 16.0
+margin_top = 49.0
+margin_right = 287.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="PanelHost"]
+margin_left = 15.0
+margin_top = 84.0
+margin_right = 55.0
+margin_bottom = 98.0
+text = "Port"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txtServerPort" type="LineEdit" parent="PanelHost"]
+anchor_left = 6.35783e-09
+margin_left = 19.6052
+margin_top = 104.759
+margin_right = 77.6052
+margin_bottom = 128.759
+text = "4546"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="PanelHost"]
+margin_left = 114.515
+margin_top = 85.0
+margin_right = 223.515
+margin_bottom = 105.0
+text = "Max Connections"
+
+[node name="txtMaxPlayers" type="SpinBox" parent="PanelHost"]
+margin_left = 120.0
+margin_top = 105.0
+margin_right = 194.0
+margin_bottom = 129.0
+min_value = 2.0
+max_value = 16.0
+value = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btCreate" type="Button" parent="PanelHost"]
+margin_left = 239.66
+margin_top = 123.448
+margin_right = 294.66
+margin_bottom = 143.448
+text = "Create"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelJoin" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 330.0
+margin_right = 310.0
+margin_bottom = 430.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PanelJoin"]
+margin_left = 111.839
+margin_top = 9.24991
+margin_right = 151.839
+margin_bottom = 23.2499
+text = "Join Server"
+
+[node name="Label2" type="Label" parent="PanelJoin"]
+margin_left = 15.0
+margin_top = 34.0
+margin_right = 36.0
+margin_bottom = 48.0
+text = "IP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txtJoinIP" type="LineEdit" parent="PanelJoin"]
+margin_left = 136.535
+margin_top = 51.0
+margin_right = 194.535
+margin_bottom = 75.0
+text = "4546"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="PanelJoin"]
+margin_left = 131.0
+margin_top = 34.0
+margin_right = 201.0
+margin_bottom = 52.0
+text = "Port"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txtJoinPort" type="LineEdit" parent="PanelJoin"]
+margin_left = 23.0
+margin_top = 51.0
+margin_right = 108.0
+margin_bottom = 75.0
+text = "127.0.0.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btJoin" type="Button" parent="PanelJoin"]
+margin_left = 240.399
+margin_top = 73.7657
+margin_right = 295.399
+margin_bottom = 93.7657
+text = "Join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelPlayer" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 310.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PanelPlayer"]
+margin_left = 2.0
+margin_top = 5.0
+margin_right = 98.0
+margin_bottom = 35.0
+text = "Player Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txtPlayerName" type="LineEdit" parent="PanelPlayer"]
+margin_left = 6.0
+margin_top = 30.0
+margin_right = 179.0
+margin_bottom = 54.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PanelPlayer"]
+margin_left = 85.0915
+margin_top = 63.892
+margin_right = 127.091
+margin_bottom = 80.892
+text = "Color"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerIcon" type="Sprite" parent="PanelPlayer"]
+position = Vector2( 40.3681, 93.3644 )
+texture = ExtResource( 1 )
+
+[node name="btColor" type="ColorPickerButton" parent="PanelPlayer"]
+margin_left = 85.0
+margin_top = 80.0
+margin_right = 145.0
+margin_bottom = 100.0
+color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btDefaultColor" type="Button" parent="PanelPlayer"]
+margin_left = 85.0
+margin_top = 100.0
+margin_right = 145.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( -556.443, 0 )
+text = "Default"
+__meta__ = {
+"_edit_use_anchors_": false
+}
